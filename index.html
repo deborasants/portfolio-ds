@@ -5,7 +5,11 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Débora Oliveira - Developer Portfolio</title>
+
+    <title>Débora Santos - Developer Portfolio</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
+
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
         rel="stylesheet" />
@@ -61,6 +65,7 @@
         .neo-shadow {
             box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 1);
         }
+
         .hidden-animate {
             opacity: 0;
             transform: translateY(40px);
@@ -86,19 +91,33 @@
                 <h2 class="text-2xl font-black tracking-tighter">DÉBORA</h2>
             </div>
             <nav class="hidden md:flex items-center gap-8">
-                <a class="font-bold hover:underline decoration-primary decoration-4 underline-offset-4"
+                <a id="nav-about" class="font-bold hover:underline decoration-primary decoration-4 underline-offset-4"
                     href="#about">About</a>
-                <a class="font-bold hover:underline decoration-accent-yellow decoration-4 underline-offset-4"
+
+                <a id="nav-skills"
+                    class="font-bold hover:underline decoration-accent-yellow decoration-4 underline-offset-4"
                     href="#skills">Skills</a>
-                <a class="font-bold hover:underline decoration-accent-pink decoration-4 underline-offset-4"
+
+                <a id="nav-experience"
+                    class="font-bold hover:underline decoration-accent-pink decoration-4 underline-offset-4"
                     href="#experience">Experience</a>
-                <a class="font-bold hover:underline decoration-primary decoration-4 underline-offset-4"
+
+                <a id="nav-projects"
+                    class="font-bold hover:underline decoration-primary decoration-4 underline-offset-4"
                     href="#projects">Projects</a>
-                <a class="px-6 py-2 bg-primary text-white neo-border shadow-neo font-black uppercase hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all"
+
+                <a id="nav-hire"
+                    class="px-6 py-2 bg-primary text-white neo-border shadow-neo font-black uppercase hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all"
                     href="#contact">Hire Me</a>
+
                 <div class="flex items-center gap-3 ml-6">
-                    <button id="btn-pt" class="text-2xl hover:scale-110 transition">🇧🇷</button>
-                    <button id="btn-en" class="text-2xl hover:scale-110 transition">🇺🇸</button>
+                    <button id="btn-pt" class="text-2xl hover:scale-110 transition">
+                        🇧🇷
+                    </button>
+
+                    <button id="btn-en" class="text-2xl hover:scale-110 transition">
+                        🇺🇸
+                    </button>
                 </div>
             </nav>
         </div>
@@ -111,30 +130,29 @@
                     class="inline-block self-start px-4 py-1 bg-accent-yellow text-black neo-border font-bold uppercase text-sm">
                     Open to Work
                 </div>
-                <h1 id="hero-title" class="text-6xl md:text-8xl font-black leading-[0.9] tracking-tighter uppercase">
+                <h1 class="text-6xl md:text-8xl font-black leading-[0.9] tracking-tighter uppercase">
                     Backend <span class="text-primary">Developer</span> | PHP & API Specialist
                 </h1>
                 <p id="hero-desc" class="text-xl md:text-2xl font-medium max-w-2xl border-l-4 border-primary pl-6">
                     6+ years of experience crafting robust server-side solutions...
                 </p>
+
                 <div class="flex flex-wrap gap-4 pt-4">
-                    <button
+                    <button id="btn-projects"
                         class="px-8 py-4 bg-primary text-white neo-border shadow-neo-lg font-black uppercase text-xl hover:translate-x-1 hover:translate-y-1 hover:shadow-neo transition-all">
                         View Projects
                     </button>
-                    <button
+
+                    <button id="btn-contact"
                         class="px-8 py-4 bg-white text-black neo-border shadow-neo-lg font-black uppercase text-xl hover:translate-x-1 hover:translate-y-1 hover:shadow-neo transition-all">
                         Contact Me
                     </button>
                 </div>
             </div>
             <div class="lg:col-span-5 relative">
-                <div
-                    class="w-full aspect-square bg-accent-pink neo-border shadow-neo-lg flex items-center justify-center overflow-hidden">
-                    <img alt="Débora Oliveira"
-                        class="grayscale contrast-125 mix-blend-multiply object-cover w-full h-full"
-                        data-alt="Professional portrait of a female developer smiling"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAx_3dPfSUTVJ64ayqpbbczI3Iy66dJab8XfzTxAu6my5tTBmGIMYroSGG4RHA-xfVsZz8p2ky7-wOOqyxkDH-d-wIrboPyCDDQ5qgIlnvM03c1OVEKPcY-SU3CHldomvueRMYWlLZI9F9Npb9WgmSUZ1Qi-ksmJ5dpbbkDbg85Skx6XoQX6oC20MaAw4jTY7Qu7GoaLIRRQsH_bfkBJtsiewN7PYFTw47s7JDHhu5-YHG_jWnYr1mnEuh11yU33ZrtEr1PAg_Hn5Vj" />
+                <div class="relative w-full aspect-square neo-border shadow-neo-lg overflow-hidden bg-accent-pink">
+                    <img src="assets/images/avatar-v2.png"
+                        class="block w-full h-full object-cover mix-blend-multiply contrast-125 grayscale" />
                 </div>
                 <div
                     class="absolute -bottom-6 -left-6 px-6 py-4 bg-accent-yellow neo-border shadow-neo font-black text-black text-2xl rotate-3">
@@ -145,56 +163,67 @@
         <!-- About Section -->
         <section class="py-20 border-t-4 border-black" id="about">
             <div class="bg-white dark:bg-slate-900 neo-border p-8 md:p-12 shadow-neo-lg">
+
                 <h2 class="text-4xl font-black uppercase mb-8 flex items-center gap-4">
-                    <span class="material-symbols-outlined text-4xl">person</span> Bio &amp; Philosophy
+                    <span class="material-symbols-outlined text-4xl">person</span>
+                    <span id="about-title"></span>
                 </h2>
+
                 <div class="grid md:grid-cols-2 gap-12 text-lg leading-relaxed">
+
+                    <!-- Coluna esquerda -->
                     <div class="flex flex-col gap-4">
-                        <p>
-                            I am a software architect at heart, dedicated to the art of building scalable, secure, and
-                            high-performance backend systems. My philosophy revolves around <span
-                                class="bg-accent-yellow px-1 text-black font-bold">SOLID principles</span> and the
-                            pursuit of clean, maintainable code.
-                        </p>
-                        <p>
-                            Over the last 6 years, I've navigated through various technical challenges, from monolithic
-                            migrations to microservices orchestration, always keeping the developer experience and
-                            business goals in harmony.
-                        </p>
+                        <p id="about-p1"></p>
+                        <p id="about-p2"></p>
                     </div>
+
+                    <!-- Coluna direita -->
                     <div class="flex flex-col gap-6">
+
                         <div class="bg-primary/10 p-6 neo-border border-dashed border-primary">
-                            <h3 class="font-black text-primary mb-2 uppercase">Core focus:</h3>
+                            <h3 id="about-core-title" class="font-black text-primary mb-2 uppercase"></h3>
+
                             <ul class="list-none space-y-2 font-bold">
-                                <li class="flex items-center gap-2"><span
-                                        class="material-symbols-outlined text-sm">check_circle</span> Scalable RESTful
-                                    &amp; GraphQL APIs</li>
-                                <li class="flex items-center gap-2"><span
-                                        class="material-symbols-outlined text-sm">check_circle</span> Database
-                                    Optimization &amp; Indexing</li>
-                                <li class="flex items-center gap-2"><span
-                                        class="material-symbols-outlined text-sm">check_circle</span> Automated Testing
-                                    &amp; CI/CD Pipelines</li>
+                                <li class="flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-sm">check_circle</span>
+                                    <span id="about-li-1"></span>
+                                </li>
+
+                                <li class="flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-sm">check_circle</span>
+                                    <span id="about-li-2"></span>
+                                </li>
+
+                                <li class="flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-sm">check_circle</span>
+                                    <span id="about-li-3"></span>
+                                </li>
                             </ul>
                         </div>
-                        <button
+
+                        <button id="about-resume"
                             class="w-full py-4 bg-accent-pink text-black neo-border shadow-neo font-black uppercase text-lg">
-                            Download Resume (PDF)
                         </button>
+
                     </div>
                 </div>
             </div>
         </section>
         <!-- Technical Skills -->
         <section class="py-20" id="skills">
-            <h2 class="text-5xl font-black uppercase mb-12 italic">Technical Toolkit</h2>
+            <h2 id="skills-title" class="text-5xl font-black uppercase mb-12 italic">
+                Technical Toolkit
+            </h2>
+
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
                 <!-- Backend -->
                 <div class="bg-primary text-white neo-border p-8 shadow-neo-lg flex flex-col gap-6">
                     <div class="w-16 h-16 bg-white flex items-center justify-center neo-border">
                         <span class="material-symbols-outlined text-black text-4xl">storage</span>
                     </div>
-                    <h3 class="text-3xl font-black uppercase">Backend</h3>
+                    <h3 id="skills-backend" class="text-3xl font-black uppercase">Backend</h3>
+
                     <div class="flex flex-wrap gap-2">
                         <span class="px-3 py-1 bg-white text-black neo-border font-bold">PHP 8.x</span>
                         <span class="px-3 py-1 bg-white text-black neo-border font-bold">Laravel</span>
@@ -204,12 +233,14 @@
                         <span class="px-3 py-1 bg-white text-black neo-border font-bold">Redis</span>
                     </div>
                 </div>
+
                 <!-- Frontend -->
                 <div class="bg-accent-yellow text-black neo-border p-8 shadow-neo-lg flex flex-col gap-6">
                     <div class="w-16 h-16 bg-white flex items-center justify-center neo-border">
                         <span class="material-symbols-outlined text-black text-4xl">auto_awesome</span>
                     </div>
-                    <h3 class="text-3xl font-black uppercase">Frontend</h3>
+                    <h3 id="skills-frontend" class="text-3xl font-black uppercase">Frontend</h3>
+
                     <div class="flex flex-wrap gap-2">
                         <span class="px-3 py-1 bg-white text-black neo-border font-bold">Vue.js</span>
                         <span class="px-3 py-1 bg-white text-black neo-border font-bold">React</span>
@@ -217,12 +248,14 @@
                         <span class="px-3 py-1 bg-white text-black neo-border font-bold">TypeScript</span>
                     </div>
                 </div>
-                <!-- Tools -->
+
+                <!-- DevOps -->
                 <div class="bg-accent-pink text-black neo-border p-8 shadow-neo-lg flex flex-col gap-6">
                     <div class="w-16 h-16 bg-white flex items-center justify-center neo-border">
                         <span class="material-symbols-outlined text-black text-4xl">construction</span>
                     </div>
-                    <h3 class="text-3xl font-black uppercase">DevOps</h3>
+                    <h3 id="skills-devops" class="text-3xl font-black uppercase">DevOps</h3>
+
                     <div class="flex flex-wrap gap-2">
                         <span class="px-3 py-1 bg-white text-black neo-border font-bold">Docker</span>
                         <span class="px-3 py-1 bg-white text-black neo-border font-bold">AWS</span>
@@ -230,11 +263,15 @@
                         <span class="px-3 py-1 bg-white text-black neo-border font-bold">Terraform</span>
                     </div>
                 </div>
+
             </div>
         </section>
         <!-- Experience Section -->
         <section class="py-20 border-t-4 border-black" id="experience">
-            <h2 class="text-5xl font-black uppercase mb-12">Professional Journey</h2>
+            <h2 id="experience-title" class="text-5xl font-black uppercase mb-12">
+                Professional Journey
+            </h2>
+
             <div class="space-y-8">
                 <!-- Experience Item -->
                 <div
@@ -244,10 +281,13 @@
                         <h4 class="text-2xl font-black uppercase">Smart In Tech</h4>
                     </div>
                     <div class="md:col-span-9">
-                        <h3 class="text-2xl font-black mb-4 uppercase">Senior Backend Developer</h3>
-                        <p class="text-lg mb-6">Led the development of a multi-tenant SaaS platform serving over 50k
-                            monthly active users. Optimized database queries resulting in a 40% reduction in response
-                            times.</p>
+                        <h3 id="exp1-role" class="text-2xl font-black mb-4 uppercase">
+                            Senior Backend Developer
+                        </h3>
+                        <p id="exp1-desc" class="text-lg mb-6">
+                            Led the development of a multi-tenant SaaS platform serving over 50k monthly active users.
+                            Optimized database queries resulting in a 40% reduction in response times.
+                        </p>
                         <div class="flex flex-wrap gap-2">
                             <span class="px-3 py-1 bg-slate-200 dark:bg-slate-700 font-bold text-sm">Laravel</span>
                             <span
@@ -256,6 +296,7 @@
                         </div>
                     </div>
                 </div>
+
                 <!-- Experience Item -->
                 <div
                     class="grid grid-cols-1 md:grid-cols-12 gap-6 bg-white dark:bg-slate-900 neo-border p-8 shadow-neo">
@@ -264,9 +305,13 @@
                         <h4 class="text-2xl font-black uppercase">Veloon</h4>
                     </div>
                     <div class="md:col-span-9">
-                        <h3 class="text-2xl font-black mb-4 uppercase">Backend Specialist</h3>
-                        <p class="text-lg mb-6">Built and maintained core financial APIs with high compliance standards.
-                            Implemented comprehensive unit and integration testing suites.</p>
+                        <h3 id="exp2-role" class="text-2xl font-black mb-4 uppercase">
+                            Backend Specialist
+                        </h3>
+                        <p id="exp2-desc" class="text-lg mb-6">
+                            Built and maintained core financial APIs with high compliance standards.
+                            Implemented comprehensive unit and integration testing suites.
+                        </p>
                         <div class="flex flex-wrap gap-2">
                             <span class="px-3 py-1 bg-slate-200 dark:bg-slate-700 font-bold text-sm">Symfony</span>
                             <span class="px-3 py-1 bg-slate-200 dark:bg-slate-700 font-bold text-sm">MySQL</span>
@@ -276,88 +321,64 @@
                 </div>
             </div>
         </section>
+
         <!-- Featured Projects -->
         <section class="py-20" id="projects">
-            <h2 class="text-5xl font-black uppercase mb-12 italic text-right">Featured Projects</h2>
+            <h2 id="projects-title" class="text-5xl font-black uppercase mb-12 italic text-right">
+                Featured Projects
+            </h2>
+
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                <!-- Project Card -->
+                <!-- Project 1 -->
                 <div class="bg-white dark:bg-slate-900 neo-border shadow-neo-lg group">
                     <div class="h-48 bg-primary neo-border border-t-0 border-l-0 border-r-0 relative overflow-hidden">
-                        <div class="absolute inset-0 bg-black/20 flex items-center justify-center">
-                            <span
-                                class="material-symbols-outlined text-white text-7xl opacity-50 group-hover:scale-110 transition-transform">cloud_sync</span>
-                        </div>
                     </div>
+
                     <div class="p-6">
-                        <h3 class="text-2xl font-black uppercase mb-3">Enterprise SaaS API</h3>
-                        <p class="text-slate-600 dark:text-slate-400 mb-6 font-medium">A high-performance REST API built
-                            for scalable business operations with complex RBAC.</p>
-                        <div class="flex flex-wrap gap-2 mb-8">
-                            <span
-                                class="text-xs font-black px-2 py-1 bg-accent-yellow text-black uppercase">Laravel</span>
-                            <span
-                                class="text-xs font-black px-2 py-1 bg-accent-yellow text-black uppercase">PostgreSQL</span>
-                            <span
-                                class="text-xs font-black px-2 py-1 bg-accent-yellow text-black uppercase">Docker</span>
-                        </div>
-                        <a class="block w-full text-center py-3 bg-black text-white neo-border font-black uppercase hover:bg-primary transition-colors"
+                        <h3 id="project1-title" class="text-2xl font-black uppercase mb-3">
+                            Enterprise SaaS API
+                        </h3>
+                        <p id="project1-desc" class="text-slate-600 dark:text-slate-400 mb-6 font-medium">
+                            A high-performance REST API built for scalable business operations with complex RBAC.
+                        </p>
+
+                        <a id="project1-btn"
+                            class="block w-full text-center py-3 bg-black text-white neo-border font-black uppercase hover:bg-primary transition-colors"
                             href="#">
                             View on GitHub
                         </a>
                     </div>
                 </div>
-                <!-- Project Card -->
+
+                <!-- Project 2 -->
                 <div class="bg-white dark:bg-slate-900 neo-border shadow-neo-lg group">
                     <div
                         class="h-48 bg-accent-pink neo-border border-t-0 border-l-0 border-r-0 relative overflow-hidden">
-                        <div class="absolute inset-0 bg-black/20 flex items-center justify-center">
-                            <span
-                                class="material-symbols-outlined text-white text-7xl opacity-50 group-hover:scale-110 transition-transform">shopping_cart</span>
-                        </div>
                     </div>
+
                     <div class="p-6">
-                        <h3 class="text-2xl font-black uppercase mb-3">E-commerce Engine</h3>
-                        <p class="text-slate-600 dark:text-slate-400 mb-6 font-medium">Custom checkout system with
-                            integrated payment gateways and real-time stock management.</p>
-                        <div class="flex flex-wrap gap-2 mb-8">
-                            <span
-                                class="text-xs font-black px-2 py-1 bg-accent-yellow text-black uppercase">Node.js</span>
-                            <span class="text-xs font-black px-2 py-1 bg-accent-yellow text-black uppercase">Stripe
-                                API</span>
-                            <span
-                                class="text-xs font-black px-2 py-1 bg-accent-yellow text-black uppercase">Redis</span>
-                        </div>
-                        <a class="block w-full text-center py-3 bg-black text-white neo-border font-black uppercase hover:bg-primary transition-colors"
-                            href="#">
-                            View on GitHub
-                        </a>
+                        <h3 id="project2-title" class="text-2xl font-black uppercase mb-3">
+                            E-commerce Engine
+                        </h3>
+                        <p id="project2-desc" class="text-slate-600 dark:text-slate-400 mb-6 font-medium">
+                            Custom checkout system with integrated payment gateways and real-time stock management.
+                        </p>
                     </div>
                 </div>
-                <!-- Project Card -->
+
+                <!-- Project 3 -->
                 <div class="bg-white dark:bg-slate-900 neo-border shadow-neo-lg group">
                     <div
                         class="h-48 bg-accent-yellow neo-border border-t-0 border-l-0 border-r-0 relative overflow-hidden">
-                        <div class="absolute inset-0 bg-black/20 flex items-center justify-center">
-                            <span
-                                class="material-symbols-outlined text-white text-7xl opacity-50 group-hover:scale-110 transition-transform">analytics</span>
-                        </div>
                     </div>
+
                     <div class="p-6">
-                        <h3 class="text-2xl font-black uppercase mb-3">Financial Analytics</h3>
-                        <p class="text-slate-600 dark:text-slate-400 mb-6 font-medium">Internal dashboard for tracking
-                            financial health with complex data aggregation logic.</p>
-                        <div class="flex flex-wrap gap-2 mb-8">
-                            <span class="text-xs font-black px-2 py-1 bg-accent-yellow text-black uppercase">PHP
-                                8.1</span>
-                            <span
-                                class="text-xs font-black px-2 py-1 bg-accent-yellow text-black uppercase">ElasticSearch</span>
-                            <span
-                                class="text-xs font-black px-2 py-1 bg-accent-yellow text-black uppercase">Vue.js</span>
-                        </div>
-                        <a class="block w-full text-center py-3 bg-black text-white neo-border font-black uppercase hover:bg-primary transition-colors"
-                            href="#">
-                            View on GitHub
-                        </a>
+                        <h3 id="project3-title" class="text-2xl font-black uppercase mb-3">
+                            Financial Analytics
+                        </h3>
+                        <p id="project3-desc" class="text-slate-600 dark:text-slate-400 mb-6 font-medium">
+                            Internal dashboard for tracking financial health with complex data aggregation logic.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -366,7 +387,7 @@
         <section class="py-20 border-y-4 border-black mb-20">
             <div class="flex flex-col md:flex-row gap-12 items-start">
                 <div class="md:w-1/3">
-                    <h2 class="text-5xl font-black uppercase leading-none">Education</h2>
+                    <h2 id="education-title" class="text-5xl font-black uppercase leading-none">Education</h2>
                 </div>
                 <div class="md:w-2/3">
                     <div class="bg-white dark:bg-slate-900 neo-border p-8 shadow-neo flex items-center gap-8">
@@ -375,7 +396,7 @@
                         </div>
                         <div>
                             <h3 class="text-2xl font-black uppercase">Senac Campinas</h3>
-                            <p class="text-xl font-bold">Technologist in System Analysis and Development</p>
+                            <p id="education-text" class="text-xl font-bold">Technologist in System Analysis and Development</p>
                             <p class="text-slate-500 font-bold">Campinas, SP</p>
                         </div>
                     </div>
@@ -386,8 +407,8 @@
         <section class="pb-20" id="contact">
             <div
                 class="bg-accent-yellow text-black neo-border p-12 md:p-20 shadow-neo-lg text-center flex flex-col items-center gap-8">
-                <h2 class="text-6xl md:text-8xl font-black uppercase tracking-tighter">Let’s Work Together</h2>
-                <p class="text-2xl font-bold max-w-2xl">Currently accepting new projects and opportunities. If you're
+                <h2 id="contact-title" class="text-6xl md:text-8xl font-black uppercase tracking-tighter">Let’s Work Together</h2>
+                <p id="contact-desc" class="text-2xl font-bold max-w-2xl">Currently accepting new projects and opportunities. If you're
                     looking for a developer who values reliability and clean architecture, drop me a message.</p>
                 <div class="flex flex-col md:flex-row gap-6 mt-8 w-full md:w-auto">
                     <a class="px-10 py-6 bg-black text-white text-2xl font-black uppercase neo-border shadow-neo hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all"
@@ -413,7 +434,7 @@
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
             <div class="flex items-center gap-2">
                 <span class="material-symbols-outlined">copyright</span>
-                <p class="font-bold uppercase tracking-widest">2024 Débora Oliveira Santos. All Rights Reserved.</p>
+                <p id="footer-rights" class="font-bold uppercase tracking-widest">2024 Débora Oliveira Santos. All Rights Reserved.</p>
             </div>
             <div class="flex gap-8 font-black uppercase italic">
                 <a class="hover:text-primary" href="#">LinkedIn</a>
