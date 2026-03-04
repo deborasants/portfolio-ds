@@ -1,0 +1,26 @@
+body {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.neo-border {
+    border: 3px solid black;
+}
+
+.neo-shadow {
+    box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 1);
+}
+
+.hidden-animate {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+html {
+    scroll-behavior: smooth;
+}
