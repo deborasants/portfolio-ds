@@ -40,7 +40,7 @@ document.querySelectorAll("section, .neo-border").forEach(el => {
 const heroTitle = document.querySelector("h1");
 
 if (heroTitle) {
-    const fullText = "Backend ";
+    const fullText = "Fullstack ";
     const highlighted = '<span class="text-primary">Developer</span>';
     const rest = " | PHP & API Specialist";
 
@@ -90,7 +90,7 @@ window.addEventListener("scroll", () => {
 
 const translations = {
     en: {
-        heroDesc: "6+ years of experience crafting robust server-side solutions, specializing in PHP, Node.js, and clean code architecture.",
+        heroDesc: "Full Stack Developer with 4+ years of experience building scalable web applications, specializing in PHP, Node.js, modern frontend technologies, and clean code architecture.",
         viewProjects: "View Projects",
         contactMe: "Contact Me",
 
@@ -134,6 +134,10 @@ const translations = {
 
         educationTitle: "Education",
         educationText: "Technologist in System Analysis and Development",
+        englishCourse: "Professional English Course",
+        courseLaravel: "Laravel REST API Development",
+        courseApi: "Advanced REST API Architecture",
+        postgraduate: "Postgraduate in Software Architecture",
 
         contactTitle: "Let’s Work Together",
         contactDesc: "Currently accepting new projects and opportunities. If you're looking for a developer who values reliability and clean architecture, drop me a message.",
@@ -142,7 +146,7 @@ const translations = {
     },
 
     pt: {
-        heroDesc: "Mais de 6 anos desenvolvendo soluções robustas no backend, especializada em PHP, Node.js e arquitetura limpa.",
+        heroDesc: "Desenvolvedora Full Stack com mais de 4 anos de experiência construindo aplicações web escaláveis, especializada em PHP, Node.js, tecnologias modernas de frontend e arquitetura limpa.",
         viewProjects: "Ver Projetos",
         contactMe: "Fale Comigo",
 
@@ -186,6 +190,10 @@ const translations = {
 
         educationTitle: "Educação",
         educationText: "Tecnólogo em Análise e Desenvolvimento de Sistemas",
+        englishCourse: "Curso de Inglês Profissional",
+        courseLaravel: "Desenvolvimento de APIs REST com Laravel",
+        courseApi: "Arquitetura Avançada de APIs REST",
+        postgraduate: "Pós-graduação em Arquitetura de Software",
 
         contactTitle: "Vamos Trabalhar Juntos",
         contactDesc: "Atualmente aceitando novos projetos e oportunidades. Se você procura uma desenvolvedora que valoriza confiabilidade e arquitetura limpa, me envie uma mensagem.",
@@ -251,6 +259,10 @@ function switchLanguage(lang) {
     // EDUCATION
     document.getElementById("education-title").innerText = translations[lang].educationTitle;
     document.getElementById("education-text").innerText = translations[lang].educationText;
+    document.getElementById("english-course").innerText = translations[lang].englishCourse;
+    document.getElementById("course-laravel").innerText = translations[lang].courseLaravel;
+    document.getElementById("course-api").innerText = translations[lang].courseApi;
+    document.getElementById("postgraduate").innerText = translations[lang].postgraduate;
 
     // CONTACT
     document.getElementById("contact-title").innerText = translations[lang].contactTitle;
@@ -266,3 +278,27 @@ function switchLanguage(lang) {
 // Mantém idioma salvo
 const savedLang = localStorage.getItem("language") || "en";
 switchLanguage(savedLang);
+
+// ============================
+// Download cv translate
+// ============================
+
+const downloadBtn = document.getElementById("download-cv");
+
+downloadBtn.addEventListener("click", () => {
+
+    const lang = localStorage.getItem("language") || "en";
+
+    let file = "";
+
+    if (lang === "pt") {
+        file = "assets/cv/debora-santos-cv-pt.pdf";
+    } else {
+        file = "assets/cv/debora-santos-cv-en.pdf";
+    }
+
+    const link = document.createElement("a");
+    link.href = file;
+    link.download = file.split("/").pop();
+    link.click();
+});
