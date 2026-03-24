@@ -90,7 +90,7 @@ window.addEventListener("scroll", () => {
 
 const translations = {
     en: {
-        heroDesc: "Full Stack Developer with 4+ years of experience building scalable web applications, specializing in PHP, Node.js, modern frontend technologies, and clean code architecture.",
+        heroDesc: "Full Stack Developer with 5+ years of experience building scalable web applications, specializing in PHP, Node.js, modern frontend technologies, and clean code architecture.",
         viewProjects: "View Projects",
         contactMe: "Contact Me",
 
@@ -115,11 +115,14 @@ const translations = {
         skillsDevops: "DevOps",
 
         experienceTitle: "Professional Journey",
-        exp1Role: "Senior Backend Developer",
-        exp1Desc: "Led the development of a multi-tenant SaaS platform serving over 50k monthly active users. Optimized database queries resulting in a 40% reduction in response times.",
+        exp1Role: "Junior IT Analyst",
+        exp1Desc: "Developed financial API integrations, including subscriptions and billing using Asaas. Implemented batch processing with cron jobs for large-scale data queries. Worked with PHP, JavaScript, SQL, and MVC architecture.",
 
-        exp2Role: "Backend Specialist",
-        exp2Desc: "Built and maintained core financial APIs with high compliance standards. Implemented comprehensive unit and integration testing suites.",
+        exp2Role: "Full Stack Developer",
+        exp2Desc: "Performed layout adjustments using the Huro template, maintained and refactored legacy code, fixed bugs, and provided technical support. Worked with PHP, JavaScript, SQL, and MVC architecture.",
+
+        exp3Role: "Mid-Level IT Analyst",
+        exp3Desc: "Fixed bugs and maintained backend systems. Developed financial data integrations through REST APIs and batch processing using cron jobs. Performed layout adjustments using jQuery and Huro template. Worked with PHP, JavaScript, SQL, and MVC architecture.",
 
         projectsTitle: "Featured Projects",
         project1Title: "Enterprise SaaS API",
@@ -146,7 +149,7 @@ const translations = {
     },
 
     pt: {
-        heroDesc: "Desenvolvedora Full Stack com mais de 4 anos de experiência construindo aplicações web escaláveis, especializada em PHP, Node.js, tecnologias modernas de frontend e arquitetura limpa.",
+        heroDesc: "Desenvolvedora Full Stack com mais de 5 anos de experiência construindo aplicações web escaláveis, especializada em PHP, Node.js, tecnologias modernas de frontend e arquitetura limpa.",
         viewProjects: "Ver Projetos",
         contactMe: "Fale Comigo",
 
@@ -171,11 +174,14 @@ const translations = {
         skillsDevops: "DevOps",
 
         experienceTitle: "Jornada Profissional",
-        exp1Role: "Desenvolvedora Backend Sênior",
-        exp1Desc: "Liderei o desenvolvimento de uma plataforma SaaS multi-tenant atendendo mais de 50 mil usuários ativos mensais. Otimizei consultas ao banco de dados, reduzindo o tempo de resposta em 40%.",
+        exp1Role: "Analista de TI Junior",
+        exp1Desc: "Desenvolvi integrações com APIs financeiras, incluindo assinaturas e cobranças utilizando Asaas. Implementei processamento em lote com jobs cron para consultas em grande escala. Trabalhei com PHP, JavaScript, SQL e arquitetura MVC.",
 
-        exp2Role: "Especialista Backend",
-        exp2Desc: "Desenvolvi e mantive APIs financeiras essenciais com altos padrões de conformidade. Implementei suítes completas de testes unitários e integração.",
+        exp2Role: "Desenvolvedora FullStack",
+        exp2Desc: "Realizei ajustes de layout utilizando o template Huro, manutenção e refatoração de código legado, correção de bugs e suporte técnico. Trabalhei com PHP, JavaScript, SQL e arquitetura MVC.",
+
+        exp3Role: "Analista de TI Pleno",
+        exp3Desc: "Realizei correção de bugs e manutenção de sistemas backend. Desenvolvi integrações de dados financeiros via APIs REST e processamento em lote com jobs cron. Fiz ajustes de layout com jQuery e template Huro. Trabalhei com PHP, JavaScript, SQL e arquitetura MVC.",
 
         projectsTitle: "Projetos em Destaque",
         project1Title: "API SaaS Corporativa",
@@ -243,6 +249,8 @@ function switchLanguage(lang) {
     document.getElementById("exp1-desc").innerText = translations[lang].exp1Desc;
     document.getElementById("exp2-role").innerText = translations[lang].exp2Role;
     document.getElementById("exp2-desc").innerText = translations[lang].exp2Desc;
+    document.getElementById("exp3-role").innerText = translations[lang].exp3Role;
+    document.getElementById("exp3-desc").innerText = translations[lang].exp3Desc;
 
     // PROJECTS
     document.getElementById("projects-title").innerText = translations[lang].projectsTitle;
@@ -283,22 +291,18 @@ switchLanguage(savedLang);
 // Download cv translate
 // ============================
 
-const downloadBtn = document.getElementById("download-cv");
-
-downloadBtn.addEventListener("click", () => {
-
+function downloadCV() {
     const lang = localStorage.getItem("language") || "en";
 
-    let file = "";
-
-    if (lang === "pt") {
-        file = "assets/cv/debora-santos-cv-pt.pdf";
-    } else {
-        file = "assets/cv/debora-santos-cv-en.pdf";
-    }
+    let file = lang === "pt"
+        ? "assets/cv/debora-santos-cv-pt.pdf"
+        : "assets/cv/debora-santos-cv-en.pdf";
 
     const link = document.createElement("a");
     link.href = file;
     link.download = file.split("/").pop();
     link.click();
-});
+}
+
+document.getElementById("download-cv")?.addEventListener("click", downloadCV);
+document.getElementById("about-resume")?.addEventListener("click", downloadCV);
