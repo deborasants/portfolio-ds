@@ -42,7 +42,7 @@ const heroTitle = document.querySelector("h1");
 if (heroTitle) {
     const fullText = "Fullstack ";
     const highlighted = '<span class="text-primary">Developer</span>';
-    const rest = " | PHP & API Specialist";
+    const rest = " | PHP & JS Specialist";
 
     heroTitle.innerHTML = "";
     let i = 0;
@@ -100,13 +100,13 @@ const translations = {
         projects: "Projects",
         hire: "Hire Me",
 
-        aboutTitle: "Bio & Philosophy",
-        aboutP1: "I am a software architect at heart, dedicated to the art of building scalable, secure, and high-performance backend systems. My philosophy revolves around SOLID principles and the pursuit of clean, maintainable code.",
-        aboutP2: "Over the last 6 years, I've navigated through various technical challenges, from monolithic migrations to microservices orchestration, always keeping the developer experience and business goals in harmony.",
-        aboutCoreTitle: "Core Focus:",
-        aboutLi1: "Scalable RESTful & GraphQL APIs",
-        aboutLi2: "Database Optimization & Indexing",
-        aboutLi3: "Automated Testing & CI/CD Pipelines",
+       aboutTitle: "About Me",
+        aboutP1: "I am a software developer focused on building and maintaining web applications, working across both backend and frontend technologies. I specialize in PHP development, creating business logic, system integrations, and REST APIs with an emphasis on performance, reliability, and clean code.",
+        aboutP2: "My experience includes maintaining and improving existing systems, fixing bugs, developing new features, creating RESTful APIs, working with SQL Server databases, and producing technical documentation to support development teams and ensure long-term project sustainability.",
+        aboutCoreTitle: "Core Skills:",
+        aboutLi1: "Backend Development with PHP",
+        aboutLi2: "Frontend Development with HTML, CSS, JavaScript, and jQuery",
+        aboutLi3: "REST API Design and Development",
         aboutResume: "Download Resume (PDF)",
 
         skillsTitle: "Technical Toolkit",
@@ -136,7 +136,7 @@ const translations = {
         project3Desc: "Internal dashboard for tracking financial health with complex data aggregation logic.",
 
         educationTitle: "Education",
-        educationText: "Technologist in System Analysis and Development",
+        educationText: "Technologist in Internet Systems and Web Development",
         englishCourse: "Professional English Course",
         courseLaravel: "Laravel REST API Development",
         courseApi: "Advanced REST API Architecture",
@@ -159,13 +159,13 @@ const translations = {
         projects: "Projetos",
         hire: "Contrate-me",
 
-        aboutTitle: "Bio & Filosofia",
-        aboutP1: "Sou uma arquiteta de software por essência, dedicada à construção de sistemas backend escaláveis, seguros e de alta performance. Minha filosofia gira em torno dos princípios SOLID e da busca por código limpo e sustentável.",
-        aboutP2: "Nos últimos 6 anos enfrentei diversos desafios técnicos, desde migrações monolíticas até orquestração de microserviços, sempre equilibrando experiência do desenvolvedor e objetivos de negócio.",
-        aboutCoreTitle: "Foco Principal:",
-        aboutLi1: "APIs RESTful e GraphQL escaláveis",
-        aboutLi2: "Otimização e Indexação de Banco de Dados",
-        aboutLi3: "Testes Automatizados e Pipelines CI/CD",
+        aboutTitle: "Sobre Mim",
+        aboutP1: "Sou desenvolvedora de software com experiência em desenvolvimento e manutenção de sistemas web, atuando tanto no backend quanto no frontend. Trabalho com PHP no desenvolvimento de regras de negócio, integrações e APIs, sempre focando em performance, organização e qualidade do código.",
+        aboutP2: "Minha experiência inclui correção e otimização de sistemas existentes, desenvolvimento de novas funcionalidades, criação de APIs REST, consultas e modelagem de dados em SQL Server, além da elaboração de documentações técnicas para apoiar equipes e garantir a evolução sustentável dos projetos.",
+        aboutCoreTitle: "Principais Competências:",
+        aboutLi1: "Desenvolvimento Backend com PHP",
+        aboutLi2: "Frontend com HTML, CSS, JavaScript e jQuery",
+        aboutLi3: "Criação e Consumo de APIs REST",
         aboutResume: "Baixar Currículo (PDF)",
 
         skillsTitle: "Ferramentas Técnicas",
@@ -195,7 +195,7 @@ const translations = {
         project3Desc: "Dashboard interno para acompanhamento da saúde financeira com lógica complexa de agregação de dados.",
 
         educationTitle: "Educação",
-        educationText: "Tecnólogo em Análise e Desenvolvimento de Sistemas",
+        educationText: "Tecnólogo em Sistemas e Desenvolvimento para Internet",
         englishCourse: "Curso de Inglês Profissional",
         courseLaravel: "Desenvolvimento de APIs REST com Laravel",
         courseApi: "Arquitetura Avançada de APIs REST",
@@ -267,10 +267,10 @@ function switchLanguage(lang) {
     // EDUCATION
     document.getElementById("education-title").innerText = translations[lang].educationTitle;
     document.getElementById("education-text").innerText = translations[lang].educationText;
-    document.getElementById("english-course").innerText = translations[lang].englishCourse;
-    document.getElementById("course-laravel").innerText = translations[lang].courseLaravel;
-    document.getElementById("course-api").innerText = translations[lang].courseApi;
-    document.getElementById("postgraduate").innerText = translations[lang].postgraduate;
+    // document.getElementById("english-course").innerText = translations[lang].englishCourse;
+    // document.getElementById("course-laravel").innerText = translations[lang].courseLaravel;
+    // document.getElementById("course-api").innerText = translations[lang].courseApi;
+    // document.getElementById("postgraduate").innerText = translations[lang].postgraduate;
 
     // CONTACT
     document.getElementById("contact-title").innerText = translations[lang].contactTitle;
@@ -304,5 +304,12 @@ function downloadCV() {
     link.click();
 }
 
-document.getElementById("download-cv")?.addEventListener("click", downloadCV);
-document.getElementById("about-resume")?.addEventListener("click", downloadCV);
+document.addEventListener("DOMContentLoaded", () => {
+
+    document.getElementById("download-cv")
+        ?.addEventListener("click", downloadCV);
+
+    document.getElementById("about-resume")
+        ?.addEventListener("click", downloadCV);
+
+});
