@@ -71,19 +71,6 @@ document.querySelectorAll("button, a").forEach(btn => {
     });
 });
 
-
-// ============================
-// Parallax leve na imagem Hero
-// ============================
-
-window.addEventListener("scroll", () => {
-    const heroImg = document.querySelector("img");
-    if (heroImg) {
-        let offset = window.pageYOffset;
-        heroImg.style.transform = `translateY(${offset * 0.05}px)`;
-    }
-});
-
 // ============================
 // Language Toggle
 // ============================
@@ -100,7 +87,7 @@ const translations = {
         projects: "Projects",
         hire: "Hire Me",
 
-       aboutTitle: "About Me",
+        aboutTitle: "About Me",
         aboutP1: "I am a software developer focused on building and maintaining web applications, working across both backend and frontend technologies. I specialize in PHP development, creating business logic, system integrations, and REST APIs with an emphasis on performance, reliability, and clean code.",
         aboutP2: "My experience includes maintaining and improving existing systems, fixing bugs, developing new features, creating RESTful APIs, working with SQL Server databases, and producing technical documentation to support development teams and ensure long-term project sustainability.",
         aboutCoreTitle: "Core Skills:",
@@ -125,15 +112,18 @@ const translations = {
         exp3Desc: "Fixed bugs and maintained backend systems. Developed financial data integrations through REST APIs and batch processing using cron jobs. Performed layout adjustments using jQuery and Huro template. Worked with PHP, JavaScript, SQL, and MVC architecture.",
 
         projectsTitle: "Featured Projects",
-        project1Title: "Enterprise SaaS API",
-        project1Desc: "A high-performance REST API built for scalable business operations with complex RBAC.",
-        project1Btn: "View on GitHub",
 
-        project2Title: "E-commerce Engine",
-        project2Desc: "Custom checkout system with integrated payment gateways and real-time stock management.",
+        project1Title: "Enterprise APIs",
+        project1Desc: "REST APIs for financial integrations, business systems, authentication, data processing and platform communication.",
+        project1Btn: "View Projects",
 
-        project3Title: "Financial Analytics",
-        project3Desc: "Internal dashboard for tracking financial health with complex data aggregation logic.",
+        project2Title: "Jobs & Automation",
+        project2Desc: "Scheduled routines, file processing, automated integrations, data imports and recurring task execution.",
+        project2Btn: "View Projects",
+
+        project3Title: "LPs & Portfolios",
+        project3Desc: "Modern landing pages, business websites and portfolios focused on performance, design and conversion.",
+        project3Btn: "View Projects",
 
         educationTitle: "Education",
         educationText: "Technologist in Internet Systems and Web Development",
@@ -183,16 +173,21 @@ const translations = {
         exp3Role: "Analista de TI Pleno",
         exp3Desc: "Realizei correção de bugs e manutenção de sistemas backend. Desenvolvi integrações de dados financeiros via APIs REST e processamento em lote com jobs cron. Fiz ajustes de layout com jQuery e template Huro. Trabalhei com PHP, JavaScript, SQL e arquitetura MVC.",
 
+        projectsTitle: "Featured Projects",
+
         projectsTitle: "Projetos em Destaque",
-        project1Title: "API SaaS Corporativa",
-        project1Desc: "API REST de alta performance desenvolvida para operações empresariais escaláveis com controle de acesso complexo (RBAC).",
-        project1Btn: "Ver no GitHub",
 
-        project2Title: "Motor de E-commerce",
-        project2Desc: "Sistema de checkout personalizado com gateways integrados e gestão de estoque em tempo real.",
+        project1Title: "APIs Corporativas",
+        project1Desc: "APIs REST para integrações financeiras, sistemas empresariais, autenticação, processamento de dados e comunicação entre plataformas.",
+        project1Btn: "Ver Projetos",
 
-        project3Title: "Analytics Financeiro",
-        project3Desc: "Dashboard interno para acompanhamento da saúde financeira com lógica complexa de agregação de dados.",
+        project2Title: "Jobs & Automações",
+        project2Desc: "Rotinas agendadas, processamento de arquivos, integrações automáticas, importação de dados e execução de tarefas recorrentes.",
+        project2Btn: "Ver Projetos",
+
+        project3Title: "LPs & Portfólios",
+        project3Desc: "Landing pages modernas, sites institucionais e portfólios desenvolvidos com foco em performance, design e conversão.",
+        project3Btn: "Ver Projetos",
 
         educationTitle: "Educação",
         educationText: "Tecnólogo em Sistemas e Desenvolvimento para Internet",
@@ -254,15 +249,18 @@ function switchLanguage(lang) {
 
     // PROJECTS
     document.getElementById("projects-title").innerText = translations[lang].projectsTitle;
+
     document.getElementById("project1-title").innerText = translations[lang].project1Title;
     document.getElementById("project1-desc").innerText = translations[lang].project1Desc;
     document.getElementById("project1-btn").innerText = translations[lang].project1Btn;
 
     document.getElementById("project2-title").innerText = translations[lang].project2Title;
     document.getElementById("project2-desc").innerText = translations[lang].project2Desc;
+    document.getElementById("project2-btn").innerText = translations[lang].project2Btn;
 
     document.getElementById("project3-title").innerText = translations[lang].project3Title;
     document.getElementById("project3-desc").innerText = translations[lang].project3Desc;
+    document.getElementById("project3-btn").innerText = translations[lang].project3Btn;
 
     // EDUCATION
     document.getElementById("education-title").innerText = translations[lang].educationTitle;
