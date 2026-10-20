@@ -104,14 +104,6 @@ export const certificates = [
     label: 'Diploma — Sistemas para Internet',
     href: `${import.meta.env.BASE_URL}assets/certificates/diploma-ds.pdf`,
   },
-  {
-    label: 'Laravel API',
-    href: `${import.meta.env.BASE_URL}assets/certificates/laravel-api.pdf`,
-  },
-  {
-    label: 'Arquitetura REST API',
-    href: `${import.meta.env.BASE_URL}assets/certificates/rest-api-architecture.pdf`,
-  },
 ]
 
 export const education = {
