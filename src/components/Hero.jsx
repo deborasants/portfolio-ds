@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { profile } from '../data/content'
+import HeroAnimation from './HeroAnimation'
 
 const letters = 'PORTFOLIO'.split('')
 
@@ -8,12 +9,16 @@ export default function Hero() {
     <header className="hero">
       <div className="hero__media" aria-hidden="true">
         <motion.img
+          className="hero__photo"
           src={profile.photo}
           alt=""
           initial={{ scale: 1.12 }}
           animate={{ scale: 1.04 }}
           transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
         />
+        <div className="hero__animation">
+          <HeroAnimation />
+        </div>
         <div className="hero__shade" />
       </div>
 
