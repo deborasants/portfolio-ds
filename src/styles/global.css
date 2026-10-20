@@ -10,7 +10,7 @@
   --radius: 22px;
   --font-display: 'Archivo Black', Impact, sans-serif;
   --font-body: 'Outfit', 'Segoe UI', sans-serif;
-  --max: 480px;
+  --content: 100%;
 }
 
 *,
@@ -65,12 +65,15 @@ button {
 }
 
 .app {
-  width: min(100%, var(--max));
-  margin: 0 auto;
+  width: 100%;
+  margin: 0;
   padding-bottom: 4rem;
+  overflow-x: hidden;
 }
 
 .section {
+  width: min(var(--content), 100%);
+  margin: 0 auto;
   padding: 2.5rem 1.25rem 1rem;
 }
 
@@ -86,6 +89,7 @@ button {
 /* Hero */
 .hero {
   position: relative;
+  width: 100%;
   min-height: 100svh;
   display: grid;
   align-content: end;
@@ -98,16 +102,8 @@ button {
   inset: 0;
 }
 
-.hero__photo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 18%;
-  transform: scale(1.04);
-}
-
 .hero__animation {
-  display: none;
+  display: block;
   position: absolute;
   inset: 0;
 }
@@ -115,8 +111,16 @@ button {
 .hero__shade {
   position: absolute;
   inset: 0;
+  pointer-events: none;
   background:
-    linear-gradient(180deg, rgba(18, 18, 18, 0.15) 0%, rgba(18, 18, 18, 0.25) 40%, rgba(18, 18, 18, 0.88) 100%);
+    linear-gradient(180deg, rgba(18, 18, 18, 0.28) 0%, rgba(18, 18, 18, 0.4) 40%, rgba(18, 18, 18, 0.92) 100%);
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 1.5rem 1.25rem 2.25rem;
 }
 
 /* Desktop animation panel */
@@ -198,17 +202,18 @@ button {
 .hero-anim__core {
   position: absolute;
   left: 50%;
-  top: 50%;
-  width: 88px;
-  height: 88px;
-  margin: -44px 0 0 -44px;
+  top: 42%;
+  width: clamp(64px, 18vw, 88px);
+  height: clamp(64px, 18vw, 88px);
+  transform: translate(-50%, -50%);
+  margin: 0;
   border-radius: 50%;
   display: grid;
   place-items: center;
   background: linear-gradient(145deg, #c4a574, #8d6a3d);
   color: #121212;
   font-family: var(--font-display);
-  font-size: 1.6rem;
+  font-size: clamp(1.2rem, 4vw, 1.6rem);
   letter-spacing: 0.04em;
   z-index: 2;
 }
@@ -270,12 +275,6 @@ button {
   50% { transform: translate(-24px, -18px) scale(1.2); }
 }
 
-.hero__content {
-  position: relative;
-  z-index: 1;
-  padding: 1.5rem 1.25rem 2.25rem;
-}
-
 .hero__year {
   display: inline-block;
   font-family: var(--font-display);
@@ -288,7 +287,7 @@ button {
 .hero__brand {
   margin: 0;
   font-family: var(--font-display);
-  font-size: clamp(2.6rem, 13vw, 3.6rem);
+  font-size: clamp(2.2rem, 11vw, 3.4rem);
   line-height: 0.92;
   letter-spacing: -0.02em;
   text-transform: uppercase;
@@ -297,10 +296,13 @@ button {
 .hero__wordmark {
   margin: 0.55rem 0 0.9rem;
   font-family: var(--font-display);
-  font-size: clamp(3.4rem, 18vw, 5rem);
-  line-height: 0.85;
+  font-size: clamp(2.6rem, 12.5vw, 4.6rem);
+  line-height: 0.9;
   letter-spacing: -0.04em;
   text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 100%;
 }
 
 .hero__wordmark span {
@@ -308,12 +310,12 @@ button {
 }
 
 .hero__wordmark .o {
-  width: 0.72em;
-  height: 0.72em;
+  width: 0.68em;
+  height: 0.68em;
   border-radius: 50%;
   background: var(--tan);
-  vertical-align: -0.05em;
-  margin: 0 0.02em;
+  vertical-align: -0.04em;
+  margin: 0 0.015em;
 }
 
 .hero__tag {
@@ -675,7 +677,7 @@ button {
 
 @media (min-width: 720px) and (max-width: 959px) {
   :root {
-    --max: 640px;
+    --content: 680px;
   }
 
   .about__split {
@@ -689,19 +691,15 @@ button {
 /* Desktop: layout amplo, diferente do mobile */
 @media (min-width: 960px) {
   :root {
-    --max: 100%;
+    --content: 1120px;
   }
 
   .app {
-    width: 100%;
-    max-width: none;
-    margin: 0;
     padding-bottom: 0;
   }
 
   .section {
-    width: min(1120px, calc(100% - 6rem));
-    margin: 0 auto;
+    width: min(var(--content), calc(100% - 6rem));
     padding: 4.5rem 0 2.5rem;
   }
 
@@ -721,19 +719,14 @@ button {
     min-height: 100vh;
   }
 
-  .hero__photo {
-    display: none;
-  }
-
-  .hero__animation {
-    display: block;
-  }
-
   .hero__shade {
     background:
       linear-gradient(90deg, rgba(246, 241, 232, 0.55) 0%, transparent 28%),
       linear-gradient(180deg, transparent 70%, rgba(18, 18, 18, 0.18) 100%);
-    pointer-events: none;
+  }
+
+  .hero-anim__core {
+    top: 50%;
   }
 
   .hero__content {
@@ -913,8 +906,12 @@ button {
 }
 
 @media (min-width: 1280px) {
+  :root {
+    --content: 1200px;
+  }
+
   .section {
-    width: min(1200px, calc(100% - 8rem));
+    width: min(var(--content), calc(100% - 8rem));
   }
 
   .hero__content {
