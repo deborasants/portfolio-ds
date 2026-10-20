@@ -45,7 +45,7 @@ export default function About() {
 
         <div className="about__split">
           <motion.div
-            className="panel"
+            className="panel panel--experience"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
@@ -64,7 +64,7 @@ export default function About() {
           </motion.div>
 
           <motion.div
-            className="panel"
+            className="panel panel--stack"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
@@ -97,7 +97,7 @@ export default function About() {
         </div>
 
         <motion.div
-          className="panel"
+          className="panel panel--links"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
